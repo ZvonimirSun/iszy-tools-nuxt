@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Return } from '@icon-park/vue-next'
 const fullScreenStatus = ref(false)
 const _user = ref({
   profile: {
@@ -31,7 +32,7 @@ const _user = ref({
         class="desc"
       >
         <NuxtLink to="/">
-          <return theme="outline" />返回首页
+          <Return theme="outline" />返回首页
         </NuxtLink><template v-if="_user.profile.nickName">
           · <NuxtLink to="/settings">
             {{ _user.profile.nickName }}

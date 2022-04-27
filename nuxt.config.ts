@@ -6,11 +6,14 @@ import type { UserConfig } from 'vite'
 export default defineNuxtConfig({
   vite: {
     plugins: [Components({
-      dirs: ['.'],
+      dirs: ['./components'],
       resolvers: [AntDesignVueResolver({
         importStyle: true,
       })],
     })],
+    optimizeDeps: {
+      include: ['@icon-park/vue-next'],
+    },
   } as UserConfig,
   modules: [
     '@vueuse/nuxt',
